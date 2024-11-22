@@ -3,9 +3,7 @@ import Link from "next/link";
 export default function NavBar() {
   return (
     <nav className="rounded-lg flex justify-between p-2 items-center gap-10">
-      <Link 
-      className="text-2xl font-bold font-serif text-white" 
-      href={"/"}>
+      <Link className="text-2xl font-bold font-serif text-white" href={"/"}>
         HOMEPAGE
       </Link>
 
@@ -23,13 +21,14 @@ export default function NavBar() {
           MY WEBSITE
         </Link>
         <div className="flex items-center justify-center">
-        <Link 
-        href="/login" 
-        className="text-slate-50 px-4 py-2">
-          Login
-        </Link>
-      
-    
+          <Link href={"/blogs"} className="text-slate-50 px-4 py-2">
+            Blogs
+          </Link>
+          <div className="flex items-center justify-center">
+            <Link href={"/login"} className="text-slate-50 px-4 py-2">
+              Login
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
