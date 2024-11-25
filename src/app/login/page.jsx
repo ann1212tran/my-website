@@ -20,7 +20,7 @@ export default function LoginForm() {
           type="password"
           placeholder="Password"
         />
-        <button className="bg-slate-100 text-black font-bold cursor-pointer px-6 py-2">
+        <button className="bg-green-500 text-black font-bold cursor-pointer px-6 py-2">
           Login
         </button>
 
@@ -32,5 +32,3 @@ export default function LoginForm() {
   </div>
   )
 }
-
- 
