@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-// import { RegisterFormSchema } from " ~/app/lib/definitions";
-// import { useActionState } from "react";
+import { RegisterFormSchema } from " ~/app/lib/definitions";
+import { useActionState } from "react";
 import { useState } from "react";
 
 // export async function Register() {
-//   const [state, formData] = useACtionState(Register);
+//     const [state, formData] = useACtionState(Register)
 //   const validatedFields = RegisterFormSchema.safeParse({
 //     name: formData.get("name"),
 //     email: formData.get("email"),
@@ -15,7 +15,7 @@ import { useState } from "react";
 //   if (!validatedFields.success) {
 //     return {
 //       errors: validatedFields.error.flatten().fieldErrors,
-//       message: "Please enter the details",
+//       message: 'Please enter the details'
 //     };
 //   }
 // }
@@ -26,24 +26,20 @@ export default function RegisterForm() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  console.log("Name: ", name);
-  console.log("Email: ", email);
-  console.log("Password: ", password)
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    
     if (!name || !email || !password) {
-      setError("All fields are required.");
+      setError("All fields are required!");
       return;
     }
-    try {
-      const res = await fetch("pages/api/register", {
-        method: "POST",
+     try {
+      const res = await fetch ('pages/api/register', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
-        body: JSON.stringify({
+        body: JSON.stringify ({
           name,
           email,
           password,
@@ -53,25 +49,28 @@ export default function RegisterForm() {
         const form = e.target;
         form.reset();
       } else {
-        console.log("User registration failed.");
+        console.log("User registration failed.")
       }
-    } catch (error) {
-      console.log("Error during registration:", error);
-    }
-  };
+     } catch (error) {
+      console.log("Error during registration:", error)
+     }
+  }
+  
 
   return (
     <div className="grid place-items-center h-screen">
       <div className="p-5 rounded-lg border">
         <h1 className="text-xl font-bold my-3">Register</h1>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <form 
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-4">
           <input
             onChange={(e) => setName(e.target.value)}
             className="text-black py-2 px-6 bg-zinc-100 w-[400px] border "
             type="text"
             placeholder="Full Name"
             name="Full Name"
-            aria-required='true'
+            aria-required="true"
           />
 
           <input
@@ -80,7 +79,7 @@ export default function RegisterForm() {
             type="text"
             placeholder="Email"
             email="Email"
-            aria-required='true'
+            aria-required="true"
           />
 
           <input
@@ -89,12 +88,13 @@ export default function RegisterForm() {
             type="password"
             placeholder="Password"
             password="Password"
-            aria-required='true'
+            aria-required="true"
           />
 
-          <button className="text-black font-bold cursor-pointer px-6 py-2 bg-green-500">
+          <button className="bg-slate-50 text-black font-bold cursor-pointer px-6 py-2">
             Submit
           </button>
+
           {error && (
             <div className="bg-red-500 text-white w-fit text-sm py-1 px-3 rounded-md mt-2">
               {error}

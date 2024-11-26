@@ -3,9 +3,11 @@ import Link from "next/link";
 import React from "react";
 import styles from './background.css';
 
+
   export  default function Home() {
   return (
     <>
+    <main>
     <div 
       style={{ display: 'flex'}}
       className="backgroundImage"
@@ -23,6 +25,7 @@ import styles from './background.css';
       />
       </div>
       
+      </main>
     </>
      
   )
