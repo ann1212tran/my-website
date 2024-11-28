@@ -5,28 +5,33 @@ import styles from './background.css';
 
 
   export  default function Home() {
+    
+  
   return (
-    <>
+  
     <main>
     <div 
-      style={{ display: 'flex'}}
-      className="backgroundImage"
+    className="grid place-items-center h-screen"
     >
       <img
-      src='https://img.freepik.com/premium-photo/colorful-smoke-black-background-with-black-background_27109-1453.jpg?w=1380'
-      fill='true'
+      src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ21yamFlcG9xaWMzYXAyejMzenU5aXl1MHV4amhiMDRmdmp2c3hsbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6vXTpomeZEyxufGU/giphy.webp"
+      height='100vh'
       quality={100}
-      size='100vw'
-      style={{
-        objectFit: 'cover'
-      }}
-      layout="responsive"
+       
+      backgroundize="cover"
+      backgroundposition='center'
+      flexdirection='column'
+      alignitems='center'
+      layout ={"responsive"}
+      unoptimized="true"
+    
     
       />
       </div>
       
       </main>
-    </>
+  
      
   )
 }
+  

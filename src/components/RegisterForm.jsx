@@ -4,6 +4,7 @@ import Link from "next/link";
 import { RegisterFormSchema } from " ~/app/lib/definitions";
 import { useActionState } from "react";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 // export async function Register() {
 //     const [state, formData] = useACtionState(Register)
@@ -26,6 +27,8 @@ export default function RegisterForm() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  const router = useRouter();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     
@@ -33,12 +36,27 @@ export default function RegisterForm() {
       setError("All fields are required!");
       return;
     }
-     try {
+    
+    try {
+      const resUserExists = await fetch('pages/api/userExists', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify ({ email }),
+      });
+       const { user } = await resUserExists.json();
+      
+      if (user) {
+        setError("User already exists.")
+        return
+      }
+    
       const res = await fetch ('pages/api/register', {
         method: 'POST',
         headers: {
           "Content-Type": "application/json"
-        },
+        },  
         body: JSON.stringify ({
           name,
           email,
@@ -48,6 +66,7 @@ export default function RegisterForm() {
       if (res.ok) {
         const form = e.target;
         form.reset();
+        router.push("/blogs"); 
       } else {
         console.log("User registration failed.")
       }

@@ -111,6 +111,15 @@ export default function ThisWebsitePage() {
               Navigating Between Pages in Next.js
             </Link>
           </li>
+          <li>
+            <Link
+            href="https://nextjs.org/learn/dashboard-app/adding-authentication"
+            alt="adding authentication"
+            target="_blank"
+            className="text-lg font-serif italic text-purple-300">
+              NextJs: Adding Authentication
+            </Link>
+          </li>
         </div>
         <br></br>
       </div>
@@ -134,6 +143,15 @@ export default function ThisWebsitePage() {
             className="text-lg font-serif italic text-purple-300"
           >
             ReactJs Tutorial: Styling and CSS basics
+          </Link>
+        </li>
+        <li>
+          <Link
+          href="https://www.youtube.com/watch?v=PEMfsqZ2-As"
+          alt="custom login/regitser page"
+          target="_blank"
+          className="text-lg font-serif italic text-purple-300">
+            Custom Login/Register page in NextJs with MongoDB
           </Link>
         </li>
       </div>

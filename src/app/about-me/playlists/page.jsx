@@ -15,9 +15,9 @@ export default function Playlists() {
               alt="christmas song"
               target="_blank"
             >
-              MeryChristmas
+              MeryChristmas by Ed Sheeran ft Elton John
             </Link>
-            by Ed Sheeran ft Elton John
+        
           </h2>
         </div>
 
@@ -28,9 +28,9 @@ export default function Playlists() {
               alt="christmas song cover"
               target="_blank"
             >
-              Christmas without you(cover)
+              Christmas without you(cover) by Babymonster
             </Link>{" "}
-            by Babymonster
+            
           </h2>
         </div>
 
@@ -41,9 +41,8 @@ export default function Playlists() {
               alt="christmas song"
               target="_blank"
             >
-              My only wish
+              My only wish by Britney Sprears
             </Link>{" "}
-            by Britney Spears
           </h2>
         </div>
       </div>

@@ -1,19 +1,23 @@
-import mongoose, { mongo, Schema } from "mongoose";
+import mongoose, { models, mongo, Schema } from "mongoose";
 import { string } from "zod";
 
-const userSchema = new Schema ({
+const userSchema = new Schema (
+    {
     name: {
-        type: string,
+        type: String,
         required: true,
     },
     email: {
-        type: string,
+        type: String,
         required: true,
     },
     password: {
-        type: string,
+        type: String,
         required: true,
     }
-}, {timestamps: true});
+}, 
+{ timestamps: true }
+);
+
 const User = models.User || mongoose.model("User", userSchema)
 export default User;
