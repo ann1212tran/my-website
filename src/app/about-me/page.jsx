@@ -15,20 +15,20 @@ export default function AboutPage() {
         <div style={{ display: "flex", flexDirection: "row" }}>
           <Image
             src={shuttershockphoto}
-            width="300"
-            height="200"
+            width="500"
+            height="300"
             alt="cherry in Japan"
           />
           <img
             src="christmaslight.jpg"
-            width="300"
-            height="200"
+            width="500"
+            height="300"
             alt="christmas in New York"
           />
           <img
             src="whalemaldives.jpg"
-            width="300"
-            height="200"
+            width="500"
+            height="300"
             alt="whale in Maldives"
           />
         </div>
@@ -51,10 +51,10 @@ export default function AboutPage() {
         </p>
         <br></br>
         <Link
-          className="text-bold underline italic text-blue-300"
+          className="text-bold underline italic text-blue-300 text-lg font-bold"
           href="/about-me/playlists"
         >
-          Playlists
+          Most curently songs listen to
         </Link>
       </div>
     </>

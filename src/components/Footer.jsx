@@ -43,7 +43,7 @@ export default function Footer() {
           </Link>
         </div>
         <div className="flex items-center justify-center space-x-4">
-            <h3 className="font-sans italic text-purple-400">Thank you!</h3>
+            <h3 className="font-sans italic text-purple-300 font-bold">Thank you!</h3>
         </div>
       </footer>
     </div>
