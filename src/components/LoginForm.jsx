@@ -83,7 +83,7 @@ export default function LoginForm() {
             name="password"
             label="Email"
             register={register}
-            // error={errors.password}
+          //   error={errors.password}
           />
           <FormInput
             id="password"
