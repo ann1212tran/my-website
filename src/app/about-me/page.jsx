@@ -19,13 +19,13 @@ export default function AboutPage() {
             height="300"
             alt="cherry in Japan"
           />
-          <img
+          <Image
             src="christmaslight.jpg"
             width="500"
             height="300"
             alt="christmas in New York"
           />
-          <img
+          <Image
             src="whalemaldives.jpg"
             width="500"
             height="300"
