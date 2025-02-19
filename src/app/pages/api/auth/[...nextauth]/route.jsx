@@ -1,7 +1,6 @@
-import NextAuth from "next-auth"; // Update this import
-import Providers from "next-auth/providers";
-import { authConfig } from "auth.config";
+import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import { authConfig } from "auth.config";
 import { z } from "zod";
 
 export default NextAuth({
@@ -81,4 +80,3 @@ export default NextAuth({
     }
     },
 })
-
