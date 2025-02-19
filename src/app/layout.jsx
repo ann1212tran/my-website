@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import NavBar from "~/components/navigation/nav-bar";
+import NavBar from "../components/navigation/nav-bar"; // Updated import path
 import { ReactNode } from "react";
 import Header from "../components/header";
 import Footer from '../components/Footer';
