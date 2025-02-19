@@ -1,5 +1,5 @@
-
-import NextAuth from "next-auth/next";
+import NextAuth from "next-auth"; // Update this import
+import Providers from "next-auth/providers";
 import { authConfig } from "auth.config";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { z } from "zod";
