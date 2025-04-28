@@ -3,9 +3,7 @@ import React, { useState, useEffect } from "react";
 import './RandomQuote.css';
 import refresh_icon from '../Assets/refresh_icon.png'
 
-
 export default function RandomQuote(){
-     
     let quotes = [];
     async function loadQuotes() {
         const response = await fetch ("https://type.fit/api/quotes");
@@ -18,8 +16,6 @@ export default function RandomQuote(){
 
         // https://api.quotable.io/random
         // https://type.fit/api/quotes
-
-
         loadQuotes()
     return (
         <div className="container">
